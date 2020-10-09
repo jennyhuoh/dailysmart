@@ -14,6 +14,10 @@
 		C64CFBAA252775D40037431F /* test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C64CFBA8252775D40037431F /* test.xcdatamodeld */; };
 		C64CFBAC252775D70037431F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64CFBAB252775D70037431F /* Assets.xcassets */; };
 		C64CFBAF252775D70037431F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64CFBAD252775D70037431F /* LaunchScreen.storyboard */; };
+		C687A8862530B16000FA1C91 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687A8852530B16000FA1C91 /* TodayController.swift */; };
+		C687A8882530B2AE00FA1C91 /* CalenderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687A8872530B2AE00FA1C91 /* CalenderController.swift */; };
+		C687A88A2530B2EF00FA1C91 /* TargetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687A8892530B2EF00FA1C91 /* TargetController.swift */; };
+		C687A88C2530B32000FA1C91 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687A88B2530B32000FA1C91 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		C64CFBAB252775D70037431F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64CFBAE252775D70037431F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C64CFBB0252775D70037431F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C687A8852530B16000FA1C91 /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
+		C687A8872530B2AE00FA1C91 /* CalenderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderController.swift; sourceTree = "<group>"; };
+		C687A8892530B2EF00FA1C91 /* TargetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetController.swift; sourceTree = "<group>"; };
+		C687A88B2530B32000FA1C91 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,10 @@
 				C64CFB9F252775D40037431F /* AppDelegate.swift */,
 				C64CFBA1252775D40037431F /* SceneDelegate.swift */,
 				C64CFBA3252775D40037431F /* ViewController.swift */,
+				C687A8852530B16000FA1C91 /* TodayController.swift */,
+				C687A8872530B2AE00FA1C91 /* CalenderController.swift */,
+				C687A8892530B2EF00FA1C91 /* TargetController.swift */,
+				C687A88B2530B32000FA1C91 /* SettingsController.swift */,
 				C64CFBA5252775D40037431F /* Main.storyboard */,
 				C64CFBAB252775D70037431F /* Assets.xcassets */,
 				C64CFBAD252775D70037431F /* LaunchScreen.storyboard */,
@@ -141,10 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C687A88C2530B32000FA1C91 /* SettingsController.swift in Sources */,
 				C64CFBA4252775D40037431F /* ViewController.swift in Sources */,
+				C687A8882530B2AE00FA1C91 /* CalenderController.swift in Sources */,
 				C64CFBAA252775D40037431F /* test.xcdatamodeld in Sources */,
+				C687A88A2530B2EF00FA1C91 /* TargetController.swift in Sources */,
 				C64CFBA0252775D40037431F /* AppDelegate.swift in Sources */,
 				C64CFBA2252775D40037431F /* SceneDelegate.swift in Sources */,
+				C687A8862530B16000FA1C91 /* TodayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
