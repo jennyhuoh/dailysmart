@@ -8,10 +8,19 @@
 import UIKit
 
 class TodayController: UIViewController {
-
+ 
+   
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        
+        //為基底的 self.view設置底色
+        self.view.backgroundColor = UIColor.white
+        
+        
+        
     }
 
 
