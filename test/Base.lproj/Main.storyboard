@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="APh-Nm-GZL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="APh-Nm-GZL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +17,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ByB-u1-NMn" kind="relationship" relationship="viewControllers" id="wUG-Fc-E9o"/>
+                        <segue destination="EOG-yf-Q4c" kind="relationship" relationship="viewControllers" id="wUG-Fc-E9o"/>
                         <segue destination="Llw-AB-hGY" kind="relationship" relationship="viewControllers" id="Ak1-fP-vMt"/>
                         <segue destination="19S-0U-Vsq" kind="relationship" relationship="viewControllers" id="UCT-bA-IEF"/>
                         <segue destination="N1p-aL-8c0" kind="relationship" relationship="viewControllers" id="xZE-EY-hu4"/>
@@ -36,14 +34,14 @@
                     <view key="view" contentMode="scaleToFill" id="0ef-OO-6pR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xKK-dr-mU3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="設定" id="a3Q-5H-ToW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpF-NP-uc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="670"/>
+            <point key="canvasLocation" x="839" y="670"/>
         </scene>
         <!--目標-->
         <scene sceneID="T0e-LR-K9X">
@@ -52,14 +50,14 @@
                     <view key="view" contentMode="scaleToFill" id="BzJ-y0-Yrm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wF1-6w-RMd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="目標" id="RhF-1d-62K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIa-8t-xH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="670"/>
+            <point key="canvasLocation" x="114" y="670"/>
         </scene>
         <!--日曆-->
         <scene sceneID="XlC-6x-2XY">
@@ -68,104 +66,49 @@
                     <view key="view" contentMode="scaleToFill" id="hv2-5A-2Ya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="olJ-XV-ySo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="日曆" id="3BS-8w-alX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXM-9K-P3P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-710" y="670"/>
+            <point key="canvasLocation" x="-574" y="670"/>
         </scene>
-        <!--今日-->
+        <!--Today Controller-->
         <scene sceneID="yCe-gG-N6r">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5u-do-yxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ByB-u1-NMn" customClass="TodayController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Q9-n1-ti0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVe-5e-jS0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="2020年 5月" id="Q1j-1e-Qsz">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle.fill" catalog="system" id="OiS-We-wE1">
-                                            <color key="tintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="week_date" translatesAutoresizingMaskIntoConstraints="NO" id="E4i-hY-h2o">
-                                <rect key="frame" x="20" y="88" width="374" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf2-lr-K5X">
-                                <rect key="frame" x="74" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="25">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcm-D7-Fop">
-                                <rect key="frame" x="130" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="26">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yL8-bw-Nxv">
-                                <rect key="frame" x="186" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="27">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jED-FT-7Gs">
-                                <rect key="frame" x="243" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="28">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-dZ-nGE">
-                                <rect key="frame" x="300" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="29">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-PY-R5x">
-                                <rect key="frame" x="356" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="30">
-                                    <color key="titleColor" red="0.098039215690000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGE-a1-dud">
-                                <rect key="frame" x="16" y="120" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="24">
-                                    <color key="titleColor" red="0.098039215686274508" green="0.20392156862745098" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OdS-2Y-DES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="今日" id="MaP-Fn-HuG"/>
+                    <navigationItem key="navigationItem" id="NKb-cR-ETw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i5u-do-yxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1430" y="1387"/>
+        </scene>
+        <!--今日-->
+        <scene sceneID="dC6-td-ZPC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EOG-yf-Q4c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="今日" id="MaP-Fn-HuG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9wF-yQ-V4c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ByB-u1-NMn" kind="relationship" relationship="rootViewController" id="Ppz-ec-Pkl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HdD-Lx-ugF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1430.4347826086957" y="669.64285714285711"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="week_date" width="399" height="39"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
