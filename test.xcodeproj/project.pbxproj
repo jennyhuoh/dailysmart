@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43BD96F4F6CE2B4D1B017837 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336DB90D59DC2D8DC8566DAC /* Pods_test.framework */; };
+		C62A9407258E248E0033CC46 /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A9406258E248E0033CC46 /* AddEvent.swift */; };
 		C64CFBA0252775D40037431F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64CFB9F252775D40037431F /* AppDelegate.swift */; };
 		C64CFBA2252775D40037431F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64CFBA1252775D40037431F /* SceneDelegate.swift */; };
 		C64CFBA4252775D40037431F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64CFBA3252775D40037431F /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		0AA15F0F2E489A0D0F6ED123 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		336DB90D59DC2D8DC8566DAC /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B140A2FD0CA829AB15A2097 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
+		C62A9406258E248E0033CC46 /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
 		C64CFB9C252775D40037431F /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64CFB9F252775D40037431F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64CFBA1252775D40037431F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 				9B140A2FD0CA829AB15A2097 /* Pods-test.debug.xcconfig */,
 				0AA15F0F2E489A0D0F6ED123 /* Pods-test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,6 +97,7 @@
 				C64CFBA1252775D40037431F /* SceneDelegate.swift */,
 				C64CFBA3252775D40037431F /* ViewController.swift */,
 				C687A8852530B16000FA1C91 /* TodayController.swift */,
+				C62A9406258E248E0033CC46 /* AddEvent.swift */,
 				C687A8872530B2AE00FA1C91 /* CalenderController.swift */,
 				C687A8892530B2EF00FA1C91 /* TargetController.swift */,
 				C687A88B2530B32000FA1C91 /* SettingsController.swift */,
@@ -228,6 +230,7 @@
 				C687A8882530B2AE00FA1C91 /* CalenderController.swift in Sources */,
 				C64CFBAA252775D40037431F /* test.xcdatamodeld in Sources */,
 				C687A88A2530B2EF00FA1C91 /* TargetController.swift in Sources */,
+				C62A9407258E248E0033CC46 /* AddEvent.swift in Sources */,
 				C64CFBA0252775D40037431F /* AppDelegate.swift in Sources */,
 				C64CFBA2252775D40037431F /* SceneDelegate.swift in Sources */,
 				C687A8862530B16000FA1C91 /* TodayController.swift in Sources */,

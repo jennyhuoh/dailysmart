@@ -13,8 +13,9 @@ class TodayController: UIViewController {
     var menuView : CVCalendarMenuView!
     var calendarView : CVCalendarView!
     var currentCalendar: Calendar!
-    var dayTextView:UITextView!
-    
+    var dayTextView: UITextView!
+    var timeLine: UIView!
+ 
     var datesDictionary:[String:String] = ["5 December, 2020":"Service","9 December, 2020":"Change Oil","20 December, 2020":"Check brakes"]
     func dotMarker(shouldShowOnDayView dayView: DayView) -> Bool
     {
@@ -46,8 +47,20 @@ class TodayController: UIViewController {
         self.view.backgroundColor = UIColor(red:239.0/255, green:239.0/255, blue:239.0/255, alpha:1.0)
         self.navigationItem.title = CVDate (date: Date(), calendar: currentCalendar).globalDescription
         
-        self.dayTextView = UITextView(frame: CGRect(x: 0, y: 120, width: 415, height: 500))
-        self.dayTextView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
+        
+        self.timeLine = UIView(frame: CGRect(x: 0, y: 340, width: 415, height: 400))
+        self.timeLine.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
+        // 建立前往 Detail 頁面的 UIButton
+        let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        myButton.setTitle("+ 新增事件", for: .normal)
+        myButton.setTitleColor(UIColor .black, for: UIControl.State.normal)
+        myButton.addTarget(nil, action: #selector(TodayController.goDetail), for: .touchUpInside)
+        myButton.center = CGPoint(x: 355, y: 365)
+              
+        self.dayTextView = UITextView(frame: CGRect(x: 75, y: 390, width: 340, height: 350))
+        self.dayTextView.backgroundColor = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1.0)
         
         self.menuView = CVCalendarMenuView(frame: CGRect(x: 20, y: 0, width:375, height: 48))
         self.calendarView = CVCalendarView(frame: CGRect(x: 20, y: 45, width: 375, height: 60))
@@ -56,10 +69,18 @@ class TodayController: UIViewController {
         self.calendarView.animatorDelegate = self
         
         self.menuView.menuViewDelegate = self
+        self.view.addSubview(timeLine)
         self.view.addSubview(dayTextView)
+        self.view.addSubview(myButton)
         self.view.addSubview(menuView)
         self.view.addSubview(calendarView)
     }
+    
+    @objc func goDetail()
+    {
+        self.present(AddEventController(), animated: true, completion: nil)
+    }
+ 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.menuView.commitMenuViewUpdate()
