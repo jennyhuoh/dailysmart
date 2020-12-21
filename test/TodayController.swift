@@ -54,6 +54,7 @@ class TodayController: UIViewController {
         
         // 建立前往 Detail 頁面的 UIButton
         let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        let addTargetButton = UIButton()
         myButton.setTitle("+ 新增事件", for: .normal)
         myButton.setTitleColor(UIColor .black, for: UIControl.State.normal)
         myButton.addTarget(nil, action: #selector(TodayController.goDetail), for: .touchUpInside)
