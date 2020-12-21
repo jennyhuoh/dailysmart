@@ -45,7 +45,7 @@ class ColorSelectController: UIViewController
         let color1 = UIButton(frame: CGRect(x: 0, y: 649, width: 415, height: 52))
         color1.addTarget(nil, action: #selector(AddEventController.goBack), for: .touchUpInside)
         color1.addTarget(nil, action: #selector(AddEventController.changeTwo), for: .touchUpInside)
-        color1.setTitle("綠", for: .normal)
+        color1.setTitle("學習", for: .normal)
         color1.backgroundColor = UIColor.white
         color1.setTitleColor(.black, for: .normal)
         let color1Image = UIImageView(frame: CGRect(x: 150, y: 663, width: 25, height: 25))
@@ -69,7 +69,7 @@ class ColorSelectController: UIViewController
         let color4 = UIButton(frame: CGRect(x: 0, y: 753, width: 415, height: 52))
         color4.addTarget(nil, action: #selector(AddEventController.goBack), for: .touchUpInside)
         color4.addTarget(nil, action: #selector(AddEventController.changeFour), for: .touchUpInside)
-        color4.setTitle("黃", for: .normal)
+        color4.setTitle("運動", for: .normal)
         color4.backgroundColor = UIColor.white
         color4.setTitleColor(.black, for: .normal)
         let color4Image = UIImageView(frame: CGRect(x: 150, y: 767, width: 25, height: 25))
