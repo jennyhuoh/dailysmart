@@ -12,7 +12,8 @@ class SettingsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        self.navigationItem.title = "設定"
+        self.view.backgroundColor=UIColor(red:248/255,green: 248/255,blue: 248/255,alpha: 1.0)
     }
 
 

@@ -70,8 +70,8 @@ class TodayController: UIViewController {
         self.calendarView.animatorDelegate = self
         
         self.menuView.menuViewDelegate = self
-        self.view.addSubview(timeLine)
-        self.view.addSubview(dayTextView)
+//        self.view.addSubview(timeLine)
+//        self.view.addSubview(dayTextView)
         self.view.addSubview(myButton)
         self.view.addSubview(menuView)
         self.view.addSubview(calendarView)
