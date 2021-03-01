@@ -7,4 +7,8 @@ target 'test' do
 pod 'CVCalendar', '~> 1.7.0'
   # Pods for test
 
+  pod 'CalendarKit'
+    
+    pod 'RealmSwift'
+    
 end
