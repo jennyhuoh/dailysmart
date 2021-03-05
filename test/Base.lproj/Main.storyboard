@@ -21,7 +21,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="EOG-yf-Q4c" kind="relationship" relationship="viewControllers" id="wUG-Fc-E9o"/>
-                        <segue destination="Llw-AB-hGY" kind="relationship" relationship="viewControllers" id="Ak1-fP-vMt"/>
+                        <segue destination="TSN-eE-dmt" kind="relationship" relationship="viewControllers" id="Ak1-fP-vMt"/>
                         <segue destination="cCg-Eu-L9v" kind="relationship" relationship="viewControllers" id="aAe-pB-2JP"/>
                         <segue destination="19S-0U-Vsq" kind="relationship" relationship="viewControllers" id="UCT-bA-IEF"/>
                         <segue destination="8AZ-3I-UaS" kind="relationship" relationship="viewControllers" id="xZE-EY-hu4"/>
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpF-NP-uc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1747.826086956522" y="669.64285714285711"/>
+            <point key="canvasLocation" x="2657.971014492754" y="669.64285714285711"/>
         </scene>
         <!--目標-->
         <scene sceneID="T0e-LR-K9X">
@@ -169,9 +169,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIa-8t-xH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="670"/>
+            <point key="canvasLocation" x="1023.1884057971015" y="669.64285714285711"/>
         </scene>
-        <!--日曆-->
+        <!--Calender Controller-->
         <scene sceneID="XlC-6x-2XY">
             <objects>
                 <viewController id="Llw-AB-hGY" customClass="CalenderController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,11 +181,11 @@
                         <viewLayoutGuide key="safeArea" id="olJ-XV-ySo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="日曆" image="btn_bottomnav_calendar" landscapeImage="btn_bottomnav_calendar" largeContentSizeImage="btn_bottomnav_calendar" selectedImage="btn_bottomnav_calendar" id="3BS-8w-alX"/>
+                    <navigationItem key="navigationItem" id="6bv-gd-oSu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXM-9K-P3P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="670"/>
+            <point key="canvasLocation" x="-620.28985507246387" y="1453.7946428571429"/>
         </scene>
         <!--Today Controller-->
         <scene sceneID="yCe-gG-N6r">
@@ -519,7 +519,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJL-Ae-HFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="669.64285714285711"/>
+            <point key="canvasLocation" x="1747.826086956522" y="669.64285714285711"/>
+        </scene>
+        <!--日曆-->
+        <scene sceneID="rho-gv-aB0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSN-eE-dmt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="日曆" image="btn_bottomnav_calendar" landscapeImage="btn_bottomnav_calendar" largeContentSizeImage="btn_bottomnav_calendar" selectedImage="btn_bottomnav_calendar" id="3BS-8w-alX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lv0-gI-sOy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Llw-AB-hGY" kind="relationship" relationship="rootViewController" id="EpH-VT-PdI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXF-qi-njB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="670"/>
         </scene>
     </scenes>
     <resources>
