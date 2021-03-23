@@ -6,5 +6,7 @@ target 'test' do
   use_frameworks!
 pod 'CVCalendar', '~> 1.7.0'
   # Pods for test
-
+  
+pod 'CalendarKit'
+pod 'JTAppleCalendar', '~> 8.0.0'
 end

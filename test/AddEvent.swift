@@ -17,6 +17,9 @@ class AddEventController: UIViewController, UITextFieldDelegate
     var rWeek: UIButton!
     var rMonth: UIButton!
     var doneButton: UIButton!
+    let formatter = DateFormatter()
+    let formatterTime = DateFormatter()
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,6 +29,19 @@ class AddEventController: UIViewController, UITextFieldDelegate
         self.addContent.layer.borderWidth = 1
         self.addContent.layer.borderColor = CGColor.init(srgbRed: 163/225, green: 163/225, blue: 163/225, alpha: 1.0)
         
+        //設置日期樣式
+        formatter.dateStyle = .full
+        //設置時間樣式
+        formatterTime.timeStyle = .long
+      
+        //客製化日期格式
+        formatter.dateFormat = "yyyy/MM/dd"
+        formatterTime.dateFormat = "hh:mm a"
+        //將時間格式轉為字串
+        let nowDate = self.formatter.string(from: Date())
+        let nowTime = self.formatterTime.string(from: Date())
+
+
         
         let myEvent = UITextField(frame: CGRect(x: 0, y: 0, width: 380, height: 44))
         myEvent.center = CGPoint(x: 207, y: 115)
@@ -125,23 +141,25 @@ class AddEventController: UIViewController, UITextFieldDelegate
         
         let dateStartBtn = UIButton(frame: CGRect(x: 83, y: 410, width: 170, height: 44))
         dateStartBtn.backgroundColor = UIColor.white
-        dateStartBtn.setTitle("2020/12/22", for: UIControl.State.normal)
+        dateStartBtn.setTitle(nowDate, for: UIControl.State.normal)
         dateStartBtn.setTitleColor(UIColor.lightGray, for: .normal)
         dateStartBtn.layer.cornerRadius = 5.0
+        dateStartBtn.addTarget(nil, action: #selector(AddEventController.selectDate), for: .touchUpInside)
         let dateEndBtn = UIButton(frame: CGRect(x: 83, y: 480, width: 170, height: 44))
         dateEndBtn.backgroundColor = UIColor.white
-        dateEndBtn.setTitle("2020/12/23", for: UIControl.State.normal)
+        dateEndBtn.setTitle(nowDate, for: UIControl.State.normal)
         dateEndBtn.setTitleColor(UIColor.lightGray, for: .normal)
         dateEndBtn.layer.cornerRadius = 5.0
+        dateEndBtn.addTarget(nil, action: #selector(AddEventController.selectDate), for: .touchUpInside)
         
         let timeStartBtn = UIButton(frame: CGRect(x: 270, y: 410, width: 125, height: 44))
         timeStartBtn.backgroundColor = UIColor.white
-        timeStartBtn.setTitle("上午 9:00", for: UIControl.State.normal)
+        timeStartBtn.setTitle(nowTime, for: UIControl.State.normal)
         timeStartBtn.setTitleColor(UIColor.lightGray, for: .normal)
         timeStartBtn.layer.cornerRadius = 5.0
         let timeEndBtn = UIButton(frame: CGRect(x: 270, y: 480, width: 125, height: 44))
         timeEndBtn.backgroundColor = UIColor.white
-        timeEndBtn.setTitle("上午 9:00", for: UIControl.State.normal)
+        timeEndBtn.setTitle(nowTime, for: UIControl.State.normal)
         timeEndBtn.setTitleColor(UIColor.lightGray, for: .normal)
         timeEndBtn.layer.cornerRadius = 5.0
         
@@ -246,18 +264,19 @@ class AddEventController: UIViewController, UITextFieldDelegate
     }
     @objc func changeTwo()
     {
-        chooseColor.setTitle("綠", for: .normal)
+        chooseColor.setTitle("學習", for: .normal)
         colorSmallImage.image = UIImage(named: "green_BCircle@3x.png")
         doneButton.setTitleColor(smartDarkGold, for: UIControl.State.normal)
     }
     @objc func changeThree()
     {
         chooseColor.setTitle("重要", for: .normal)
+        colorSmallImage.image = UIImage(named: "pink_BCircle@3x.png")
         doneButton.setTitleColor(smartDarkGold, for: UIControl.State.normal)
     }
     @objc func changeFour()
     {
-        chooseColor.setTitle("黃", for: .normal)
+        chooseColor.setTitle("運動", for: .normal)
         colorSmallImage.image = UIImage(named: "yellow_BCircle@3x.png")
         doneButton.setTitleColor(smartDarkGold, for: UIControl.State.normal)
     }
@@ -277,6 +296,11 @@ class AddEventController: UIViewController, UITextFieldDelegate
     @objc func goDetail()
     {
         self.present(ColorSelectController(), animated: true, completion: nil)
+    }
+    //select date
+    @objc func selectDate()
+    {
+        self.present(SelectDateController(), animated: true, completion: nil)
     }
 }
 
