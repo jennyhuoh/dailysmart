@@ -6,6 +6,7 @@
 //  Copyright © 2020 graduateproj. All rights reserved.
 //
 import UIKit
+import AYPopupPickerView
 
 class AddEventController: UIViewController, UITextFieldDelegate
 {
@@ -19,10 +20,14 @@ class AddEventController: UIViewController, UITextFieldDelegate
     var doneButton: UIButton!
     let formatter = DateFormatter()
     let formatterTime = DateFormatter()
+    let popupDatePickerView = AYPopupDatePickerView()
+    var timeStartBtn : UIButton!
+    var timeEndBtn : UIButton!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         self.view.backgroundColor = smartLightBlue
         self.addContent = UIView(frame: CGRect(x: 0, y: 75, width: 415, height: 770))
         self.addContent.backgroundColor = smartLightBlue
@@ -60,6 +65,7 @@ class AddEventController: UIViewController, UITextFieldDelegate
         myEvent.backgroundColor = UIColor.white
         myEvent.borderStyle = .none
         myEvent.delegate = self
+        myEvent.setLeftPaddingPoints(10)
         
         
         let myNote = UITextField(frame: CGRect(x: 0, y: 0, width: 380, height: 44))
@@ -79,6 +85,7 @@ class AddEventController: UIViewController, UITextFieldDelegate
         myNote.backgroundColor = UIColor.white
         myNote.borderStyle = .none
         myNote.delegate = self
+        myNote.setLeftPaddingPoints(10)
         
         let part = UILabel(frame: CGRect(x: 18, y: 220, width: 100, height: 40))
         part.text = "分類"
@@ -152,16 +159,22 @@ class AddEventController: UIViewController, UITextFieldDelegate
         dateEndBtn.layer.cornerRadius = 5.0
         dateEndBtn.addTarget(nil, action: #selector(AddEventController.selectDate), for: .touchUpInside)
         
-        let timeStartBtn = UIButton(frame: CGRect(x: 270, y: 410, width: 125, height: 44))
+        //只跑出時間的旋轉滾輪
+        popupDatePickerView.datePickerView.datePickerMode = .time
+        popupDatePickerView.overrideUserInterfaceStyle = .light
+        
+        timeStartBtn = UIButton(frame: CGRect(x: 270, y: 410, width: 125, height: 44))
         timeStartBtn.backgroundColor = UIColor.white
         timeStartBtn.setTitle(nowTime, for: UIControl.State.normal)
         timeStartBtn.setTitleColor(UIColor.lightGray, for: .normal)
         timeStartBtn.layer.cornerRadius = 5.0
-        let timeEndBtn = UIButton(frame: CGRect(x: 270, y: 480, width: 125, height: 44))
+        timeStartBtn.addTarget(nil, action: #selector(timePickerViewButtonTapped), for: .touchUpInside)
+        timeEndBtn = UIButton(frame: CGRect(x: 270, y: 480, width: 125, height: 44))
         timeEndBtn.backgroundColor = UIColor.white
         timeEndBtn.setTitle(nowTime, for: UIControl.State.normal)
         timeEndBtn.setTitleColor(UIColor.lightGray, for: .normal)
         timeEndBtn.layer.cornerRadius = 5.0
+        timeEndBtn.addTarget(nil, action: #selector(timeEndPickerViewButtonTapped), for: .touchUpInside)
         
         let myLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
         myLabel.center = CGPoint(x: 207, y:40)
@@ -281,6 +294,32 @@ class AddEventController: UIViewController, UITextFieldDelegate
         doneButton.setTitleColor(smartDarkGold, for: UIControl.State.normal)
     }
     
+    @objc func timePickerViewButtonTapped(_ sender: Any) {
+        popupDatePickerView.display(defaultDate: Date(), doneHandler: { date in
+            
+            let dateFormatter: DateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "h:mm a"
+            dateFormatter.locale = Locale(identifier: "zh_Hant_TW") // 設定地區
+            dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei") // 設定時區
+            let dateFormatString: String = dateFormatter.string(from: date)
+            self.timeStartBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
+            print("\(dateFormatString)")
+        })
+    }
+    
+    @objc func timeEndPickerViewButtonTapped(_ sender: Any) {
+        popupDatePickerView.display(defaultDate: Date(), doneHandler: { date in
+            print("\(date)")
+            let dateFormatter: DateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "h:mm a"
+            dateFormatter.locale = Locale(identifier: "zh_Hant_TW") // 設定地區
+            dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei") // 設定時區
+            let dateFormatString: String = dateFormatter.string(from: date)
+            self.timeEndBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
+        })
+    }
+    
+    
     
     private func textFieldShouldReturn(textField: UITextField) -> Bool
     {
@@ -303,4 +342,16 @@ class AddEventController: UIViewController, UITextFieldDelegate
         self.present(SelectDateController(), animated: true, completion: nil)
     }
 }
-
+//萬用設左右 padding
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
+    }
+}

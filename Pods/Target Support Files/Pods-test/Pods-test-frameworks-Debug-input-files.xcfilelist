@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AYPopupPickerView/AYPopupPickerView.framework
 ${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework
 ${BUILT_PRODUCTS_DIR}/CalendarKit/CalendarKit.framework
 ${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework

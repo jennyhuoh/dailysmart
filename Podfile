@@ -7,6 +7,7 @@ target 'test' do
 pod 'CVCalendar', '~> 1.7.0'
   # Pods for test
   
-pod 'CalendarKit'
+pod 'CalendarKit', '~> 0.14.7'
 pod 'JTAppleCalendar', '~> 8.0.0'
+pod 'AYPopupPickerView', '~> 1.2'
 end

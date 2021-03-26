@@ -1,24 +1,28 @@
 PODS:
+  - AYPopupPickerView (1.2)
   - CalendarKit (0.14.7)
   - CVCalendar (1.7.0)
   - JTAppleCalendar (8.0.3)
 
 DEPENDENCIES:
-  - CalendarKit
+  - AYPopupPickerView (~> 1.2)
+  - CalendarKit (~> 0.14.7)
   - CVCalendar (~> 1.7.0)
   - JTAppleCalendar (~> 8.0.0)
 
 SPEC REPOS:
   trunk:
+    - AYPopupPickerView
     - CalendarKit
     - CVCalendar
     - JTAppleCalendar
 
 SPEC CHECKSUMS:
+  AYPopupPickerView: 639e88c630c79f68e1dc34cf2c90f43ea2dbff46
   CalendarKit: 2352322e095c90645a5f22b4f6b1b1e8ca03f665
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
 
-PODFILE CHECKSUM: e88605f53bd070441fdb9444c6f40b74b5593fde
+PODFILE CHECKSUM: f94a9a13d49d23922ba64696c300a072c5c515a9
 
 COCOAPODS: 1.10.1
