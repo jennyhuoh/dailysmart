@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43BD96F4F6CE2B4D1B017837 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336DB90D59DC2D8DC8566DAC /* Pods_test.framework */; };
+		1EF39921CECFEA748DA23CDB /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEB96034578BAD91B9357B7 /* Pods_test.framework */; };
+		56EC636C2613283D00BC69EB /* eventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC636B2613283D00BC69EB /* eventData.swift */; };
 		C62A9407258E248E0033CC46 /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A9406258E248E0033CC46 /* AddEvent.swift */; };
 		C62A942C258E375D0033CC46 /* ColorSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A942B258E375D0033CC46 /* ColorSelect.swift */; };
 		C62A94492590EB7F0033CC46 /* yellow_BCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C62A94452590EB7E0033CC46 /* yellow_BCircle@3x.png */; };
@@ -29,12 +30,16 @@
 		C6FD5D2D25FBBD9D0048317F /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FD5D2C25FBBD9D0048317F /* DateCell.swift */; };
 		C6FD5D3526062D9C0048317F /* CalendarSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FD5D3326062D9C0048317F /* CalendarSectionHeaderView.swift */; };
 		C6FD5D3626062D9C0048317F /* CalendarSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FD5D3426062D9C0048317F /* CalendarSectionHeaderView.xib */; };
+		F4E830F32619C22900D2884B /* AddTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E830F22619C22900D2884B /* AddTargetViewController.swift */; };
+		F4E830F62619C23000D2884B /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E830F52619C23000D2884B /* CustomSegmentedControl.swift */; };
+		F4E830F92619D98900D2884B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E830F82619D98900D2884B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0AA15F0F2E489A0D0F6ED123 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
-		336DB90D59DC2D8DC8566DAC /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B140A2FD0CA829AB15A2097 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
+		3BEB96034578BAD91B9357B7 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4596BDEA1399EC2597091E0D /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
+		48B46639E6659C8D807B1B4C /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
+		56EC636B2613283D00BC69EB /* eventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventData.swift; sourceTree = "<group>"; };
 		C62A9406258E248E0033CC46 /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
 		C62A942B258E375D0033CC46 /* ColorSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelect.swift; sourceTree = "<group>"; };
 		C62A94452590EB7E0033CC46 /* yellow_BCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow_BCircle@3x.png"; sourceTree = "<group>"; };
@@ -59,6 +64,9 @@
 		C6FD5D2C25FBBD9D0048317F /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		C6FD5D3326062D9C0048317F /* CalendarSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSectionHeaderView.swift; sourceTree = "<group>"; };
 		C6FD5D3426062D9C0048317F /* CalendarSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarSectionHeaderView.xib; sourceTree = "<group>"; };
+		F4E830F22619C22900D2884B /* AddTargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTargetViewController.swift; path = "../../dailys_3_28-main/test/AddTargetViewController.swift"; sourceTree = "<group>"; };
+		F4E830F52619C23000D2884B /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegmentedControl.swift; path = "../../dailys_3_28-main/test/CustomSegmentedControl.swift"; sourceTree = "<group>"; };
+		F4E830F82619D98900D2884B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43BD96F4F6CE2B4D1B017837 /* Pods_test.framework in Frameworks */,
+				1EF39921CECFEA748DA23CDB /* Pods_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +84,8 @@
 		A823F4FE42BFAC6E40C22E99 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B140A2FD0CA829AB15A2097 /* Pods-test.debug.xcconfig */,
-				0AA15F0F2E489A0D0F6ED123 /* Pods-test.release.xcconfig */,
+				4596BDEA1399EC2597091E0D /* Pods-test.debug.xcconfig */,
+				48B46639E6659C8D807B1B4C /* Pods-test.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -86,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				C6FD5CB525FA463C0048317F /* JTAppleCalendar.framework */,
-				336DB90D59DC2D8DC8566DAC /* Pods_test.framework */,
+				3BEB96034578BAD91B9357B7 /* Pods_test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +131,9 @@
 				C64CFBA3252775D40037431F /* ViewController.swift */,
 				C687A8852530B16000FA1C91 /* TodayController.swift */,
 				C62A9406258E248E0033CC46 /* AddEvent.swift */,
+				56EC636B2613283D00BC69EB /* eventData.swift */,
+				F4E830F52619C23000D2884B /* CustomSegmentedControl.swift */,
+				F4E830F22619C22900D2884B /* AddTargetViewController.swift */,
 				C6FD5CAB25F902EF0048317F /* SelectDate.swift */,
 				C6FD5D2C25FBBD9D0048317F /* DateCell.swift */,
 				C62A942B258E375D0033CC46 /* ColorSelect.swift */,
@@ -130,6 +141,7 @@
 				C687A8892530B2EF00FA1C91 /* TargetController.swift */,
 				C687A88B2530B32000FA1C91 /* SettingsController.swift */,
 				C64CFBA5252775D40037431F /* Main.storyboard */,
+				F4E830F82619D98900D2884B /* MainViewController.swift */,
 				C64CFBAB252775D70037431F /* Assets.xcassets */,
 				C64CFBAD252775D70037431F /* LaunchScreen.storyboard */,
 				C64CFBB0252775D70037431F /* Info.plist */,
@@ -154,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C64CFBB3252775D70037431F /* Build configuration list for PBXNativeTarget "test" */;
 			buildPhases = (
-				0036117EBEE21D0E36E065E0 /* [CP] Check Pods Manifest.lock */,
+				314D9D35214691F4EE88649F /* [CP] Check Pods Manifest.lock */,
 				C64CFB98252775D40037431F /* Sources */,
 				C64CFB99252775D40037431F /* Frameworks */,
 				C64CFB9A252775D40037431F /* Resources */,
-				E417D19B9C6575C1DFD20DB1 /* [CP] Embed Pods Frameworks */,
+				C39C0A8F066E50F279D796AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +233,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0036117EBEE21D0E36E065E0 /* [CP] Check Pods Manifest.lock */ = {
+		314D9D35214691F4EE88649F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -243,7 +255,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E417D19B9C6575C1DFD20DB1 /* [CP] Embed Pods Frameworks */ = {
+		C39C0A8F066E50F279D796AB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,12 +286,16 @@
 				C64CFBAA252775D40037431F /* test.xcdatamodeld in Sources */,
 				C687A88A2530B2EF00FA1C91 /* TargetController.swift in Sources */,
 				C62A9407258E248E0033CC46 /* AddEvent.swift in Sources */,
+				F4E830F92619D98900D2884B /* MainViewController.swift in Sources */,
 				C6FD5D2D25FBBD9D0048317F /* DateCell.swift in Sources */,
+				56EC636C2613283D00BC69EB /* eventData.swift in Sources */,
 				C64CFBA0252775D40037431F /* AppDelegate.swift in Sources */,
 				C6FD5CAC25F902EF0048317F /* SelectDate.swift in Sources */,
 				C6FD5D3526062D9C0048317F /* CalendarSectionHeaderView.swift in Sources */,
+				F4E830F32619C22900D2884B /* AddTargetViewController.swift in Sources */,
 				C64CFBA2252775D40037431F /* SceneDelegate.swift in Sources */,
 				C687A8862530B16000FA1C91 /* TodayController.swift in Sources */,
+				F4E830F62619C23000D2884B /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +437,7 @@
 		};
 		C64CFBB4252775D70037431F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B140A2FD0CA829AB15A2097 /* Pods-test.debug.xcconfig */;
+			baseConfigurationReference = 4596BDEA1399EC2597091E0D /* Pods-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,7 +457,7 @@
 		};
 		C64CFBB5252775D70037431F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AA15F0F2E489A0D0F6ED123 /* Pods-test.release.xcconfig */;
+			baseConfigurationReference = 48B46639E6659C8D807B1B4C /* Pods-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

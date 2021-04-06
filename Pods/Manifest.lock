@@ -3,12 +3,18 @@ PODS:
   - CalendarKit (0.14.7)
   - CVCalendar (1.7.0)
   - JTAppleCalendar (8.0.3)
+  - Realm (10.7.2):
+    - Realm/Headers (= 10.7.2)
+  - Realm/Headers (10.7.2)
+  - RealmSwift (10.7.2):
+    - Realm (= 10.7.2)
 
 DEPENDENCIES:
   - AYPopupPickerView (~> 1.2)
   - CalendarKit (~> 0.14.7)
   - CVCalendar (~> 1.7.0)
   - JTAppleCalendar (~> 8.0.0)
+  - RealmSwift (~> 10.7.2)
 
 SPEC REPOS:
   trunk:
@@ -16,13 +22,17 @@ SPEC REPOS:
     - CalendarKit
     - CVCalendar
     - JTAppleCalendar
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   AYPopupPickerView: 639e88c630c79f68e1dc34cf2c90f43ea2dbff46
   CalendarKit: 2352322e095c90645a5f22b4f6b1b1e8ca03f665
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
+  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
 
-PODFILE CHECKSUM: f94a9a13d49d23922ba64696c300a072c5c515a9
+PODFILE CHECKSUM: 4e58b1c6885defe28c12a3cc24060b96a30f1688
 
 COCOAPODS: 1.10.1
