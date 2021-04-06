@@ -162,6 +162,17 @@ class AddEventController: UIViewController, UITextFieldDelegate
         //只跑出時間的旋轉滾輪
         popupDatePickerView.datePickerView.datePickerMode = .time
         popupDatePickerView.overrideUserInterfaceStyle = .light
+        popupDatePickerView.headerView.backgroundColor = smartLightBlue
+        popupDatePickerView.datePickerView.backgroundColor = smartLightBlue
+        popupDatePickerView.tintColor = smartDarkBlue
+        popupDatePickerView.doneButton.setTitle("儲存", for: .normal)
+        popupDatePickerView.doneButton.setTitleColor(smartDarkGold, for: .normal)
+        popupDatePickerView.cancelButton.setTitle("取消", for: .normal)
+        popupDatePickerView.cancelButton.setTitleColor(smartDarkGold, for: .normal)
+        NSLayoutConstraint.activate([popupDatePickerView.headerView.heightAnchor.constraint(equalToConstant: 40),
+                                     popupDatePickerView.datePickerView.heightAnchor.constraint(equalToConstant: 270)])
+        
+        
         
         timeStartBtn = UIButton(frame: CGRect(x: 270, y: 410, width: 125, height: 44))
         timeStartBtn.backgroundColor = UIColor.white
@@ -173,6 +184,7 @@ class AddEventController: UIViewController, UITextFieldDelegate
         timeEndBtn.backgroundColor = UIColor.white
         timeEndBtn.setTitle(nowTime, for: UIControl.State.normal)
         timeEndBtn.setTitleColor(UIColor.lightGray, for: .normal)
+        timeEndBtn.setTitleColor(smartDarkBlue, for: .focused)
         timeEndBtn.layer.cornerRadius = 5.0
         timeEndBtn.addTarget(nil, action: #selector(timeEndPickerViewButtonTapped), for: .touchUpInside)
         
@@ -189,13 +201,17 @@ class AddEventController: UIViewController, UITextFieldDelegate
         myButton.addTarget(nil, action: #selector(AddEventController.goBack), for: .touchUpInside)
         myButton.center = CGPoint(x: 35, y: 40)
         myButton.tintColor = smartDarkGold
+       
         
         doneButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
         doneButton.setTitle("完成", for: .normal)
         doneButton.setTitleColor(UIColor.gray, for: UIControl.State.normal)
-        doneButton.addTarget(nil, action: #selector(AddEventController.goBack), for: .touchUpInside)
+       
         doneButton.center = CGPoint(x: 380, y: 40)
         doneButton.tintColor = smartDarkGold
+        if myEvent.text != "" {
+            doneButton.addTarget(nil, action: #selector(AddEventController.goBack), for: .touchUpInside)
+        }
         
         self.view.addSubview(addContent)
         self.view.addSubview(timeEndBtn)
@@ -302,7 +318,11 @@ class AddEventController: UIViewController, UITextFieldDelegate
             dateFormatter.locale = Locale(identifier: "zh_Hant_TW") // 設定地區
             dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei") // 設定時區
             let dateFormatString: String = dateFormatter.string(from: date)
+            self.timeStartBtn.setTitleColor(smartDarkBlue, for: .normal)
             self.timeStartBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
+            print("\(dateFormatString)")
+            self.timeEndBtn.setTitleColor(smartDarkBlue, for: .normal)
+            self.timeEndBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
             print("\(dateFormatString)")
         })
     }
@@ -315,6 +335,7 @@ class AddEventController: UIViewController, UITextFieldDelegate
             dateFormatter.locale = Locale(identifier: "zh_Hant_TW") // 設定地區
             dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei") // 設定時區
             let dateFormatString: String = dateFormatter.string(from: date)
+            self.timeEndBtn.setTitleColor(smartDarkBlue, for: .normal)
             self.timeEndBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
         })
     }
