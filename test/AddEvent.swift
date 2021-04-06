@@ -7,7 +7,6 @@
 //
 import UIKit
 import AYPopupPickerView
-import RealmSwift
 
 class AddEventController: UIViewController, UITextFieldDelegate
 {
@@ -24,13 +23,6 @@ class AddEventController: UIViewController, UITextFieldDelegate
     let popupDatePickerView = AYPopupDatePickerView()
     var timeStartBtn : UIButton!
     var timeEndBtn : UIButton!
-    var myEvent:UITextField!
-    var myNote:UITextField!
-    var timeStartString:String = "time string"
-    var timeStartData = DateFormatter()
-    var timeEndString:String = "end time"
-    var timeEndData = DateFormatter()
-    
 
     override func viewDidLoad()
     {
@@ -53,19 +45,10 @@ class AddEventController: UIViewController, UITextFieldDelegate
         //將時間格式轉為字串
         let nowDate = self.formatter.string(from: Date())
         let nowTime = self.formatterTime.string(from: Date())
-        print(nowDate)
-        print(formatter)
-        
-        //預設新增事件的開始跟結束時間 為目前時間
-        self.timeStartData = formatterTime
-        self.timeEndData = formatterTime
-        
-//        self.timeStartString = nowTime
-//        self.timeEndString = nowTime
 
 
         
-        myEvent = UITextField(frame: CGRect(x: 0, y: 0, width: 380, height: 44))
+        let myEvent = UITextField(frame: CGRect(x: 0, y: 0, width: 380, height: 44))
         myEvent.center = CGPoint(x: 207, y: 115)
         // 尚未輸入時的預設顯示提示文字
         myEvent.placeholder = " 輸入事件"
@@ -85,7 +68,7 @@ class AddEventController: UIViewController, UITextFieldDelegate
         myEvent.setLeftPaddingPoints(10)
         
         
-        myNote = UITextField(frame: CGRect(x: 0, y: 0, width: 380, height: 44))
+        let myNote = UITextField(frame: CGRect(x: 0, y: 0, width: 380, height: 44))
         myNote.center = CGPoint(x: 207, y: 175)
         // 尚未輸入時的預設顯示提示文字
         myNote.placeholder = " 新增備註"
@@ -251,30 +234,6 @@ class AddEventController: UIViewController, UITextFieldDelegate
         self.view.addSubview(doneButton)
         self.view.addSubview(myButton)
     }
-    
-    
-    //MARK:儲存事件fun
-    @objc func saveEvent(){
-        let content = myEvent.text!
-        let note = myNote.text!
-        let Starttime = timeStartString
-        let Endtime = timeEndString
-        print("事件：\(content)備註：\(note)開始時間：\(Starttime)結束時間：\(Endtime)")
-        
-        let eventdata = eventDataList()
-        eventdata.content = content
-        eventdata.note = note
-//        eventdata.Starttime = Starttime
-//        eventdata.Endtime = Endtime
-        let realm = try! Realm()
-        try! realm.write{
-            realm.add(eventdata)
-        }
-        //印出路徑
-        print(realm.configuration.fileURL!.deletingLastPathComponent().path)
-        goBack()
-    }
-    
     @objc func changeNoneBackground()
     {
         rNone.backgroundColor = smartMiddleBlue
@@ -358,14 +317,13 @@ class AddEventController: UIViewController, UITextFieldDelegate
             dateFormatter.dateFormat = "h:mm a"
             dateFormatter.locale = Locale(identifier: "zh_Hant_TW") // 設定地區
             dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei") // 設定時區
-            self.timeStartData = dateFormatter
-            print("選擇完的開始時間：\(self.timeStartData)")
-            self.timeStartString = dateFormatter.string(from: date)
+            let dateFormatString: String = dateFormatter.string(from: date)
             self.timeStartBtn.setTitleColor(smartDarkBlue, for: .normal)
+            self.timeStartBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
+            print("\(dateFormatString)")
             self.timeEndBtn.setTitleColor(smartDarkBlue, for: .normal)
-            self.timeStartBtn.setTitle("\(self.timeStartString)", for: UIControl.State.normal)
-            self.timeEndBtn.setTitle("\(self.timeEndString)", for: UIControl.State.normal)
-            print("\(self.timeStartString)in timepicker")
+            self.timeEndBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
+            print("\(dateFormatString)")
         })
     }
     
@@ -376,13 +334,10 @@ class AddEventController: UIViewController, UITextFieldDelegate
             dateFormatter.dateFormat = "h:mm a"
             dateFormatter.locale = Locale(identifier: "zh_Hant_TW") // 設定地區
             dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei") // 設定時區
-            self.timeEndData = dateFormatter
-            print("選擇完的結束時間：\(self.timeEndData)")
-            self.timeEndString = dateFormatter.string(from: date)
-             self.timeEndBtn.setTitleColor(smartDarkBlue, for: .normal)
-            self.timeEndBtn.setTitle("\(self.timeEndString)", for: UIControl.State.normal)
-            print("\(self.timeEndString)in timepicker")
-           
+            let dateFormatString: String = dateFormatter.string(from: date)
+            self.timeEndBtn.setTitleColor(smartDarkBlue, for: .normal)
+            self.timeEndBtn.setTitle("\(dateFormatString)", for: UIControl.State.normal)
+        })
     }
     
     
