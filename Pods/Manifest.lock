@@ -3,6 +3,7 @@ PODS:
   - CalendarKit (0.14.7)
   - CVCalendar (1.7.0)
   - JTAppleCalendar (8.0.3)
+  - PageMenu (2.0.0)
   - Realm (10.7.2):
     - Realm/Headers (= 10.7.2)
   - Realm/Headers (10.7.2)
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - CalendarKit (~> 0.14.7)
   - CVCalendar (~> 1.7.0)
   - JTAppleCalendar (~> 8.0.0)
+  - PageMenu
   - RealmSwift (~> 10.7.2)
 
 SPEC REPOS:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - CalendarKit
     - CVCalendar
     - JTAppleCalendar
+    - PageMenu
     - Realm
     - RealmSwift
 
@@ -30,9 +33,10 @@ SPEC CHECKSUMS:
   CalendarKit: 2352322e095c90645a5f22b4f6b1b1e8ca03f665
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
   RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
 
-PODFILE CHECKSUM: 4e58b1c6885defe28c12a3cc24060b96a30f1688
+PODFILE CHECKSUM: 132b3f10fc996ea10800d422801118ca1106acd7
 
 COCOAPODS: 1.10.1

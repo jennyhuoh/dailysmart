@@ -10,7 +10,6 @@ pod 'CVCalendar', '~> 1.7.0'
 pod 'CalendarKit', '~> 0.14.7'
 pod 'JTAppleCalendar', '~> 8.0.0'
 pod 'AYPopupPickerView', '~> 1.2'
-
 pod 'RealmSwift', '~> 10.7.2'
-
+pod 'PageMenu'
 end
