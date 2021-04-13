@@ -65,7 +65,7 @@ class TodayController: DayViewController {
                 cardScrollView.isDirectionalLockEnabled = true
                 
                 cardBackground = UIView(frame: CGRect(x: 0, y: 0, width: 350, height: 210))
-                cardBackground.backgroundColor = smartDarkGold
+                cardBackground.backgroundColor = smartLightGold
                 cardBackground.layer.cornerRadius = 20
                 
                 cardTitle = UILabel(frame: CGRect(x: 20, y: 10, width: 310, height: 40))
